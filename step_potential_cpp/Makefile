@@ -10,13 +10,13 @@ ifeq ($(ARCH),Darwin) # on macOS
   endif
 else # on Linux
   ifeq ($(has_icc),0) # using Intel icc with mkl
-    CXX ?= icc
+    CXX = icc
     CXXFLAGS += -qopenmp # Enable openmp for icc
     CXXFLAGS += -I"${MKLROOT}/include"
     CXXFLAGS += -L${MKLROOT}/lib/intel64 -lmkl_rt -lpthread -lm -ldl
     CXXFLAGS += -DEIGEN_USE_MKL_ALL 
   else
-    CXX ?= g++
+    CXX = g++
     CXXFLAGS += -fopenmp # Enable openmp for gcc
   endif
 endif
