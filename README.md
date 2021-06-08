@@ -9,14 +9,14 @@ Solving Schrodinger Equation Numerically in Python
 
 ## Environment (macOS, suggested)
 1. Install [MacPort](https://www.macports.org/install.php)
-2. Install **ImageMagick** (for GIF) and **ffmpeg** (for MP4)
+2. Install **ffmpeg** (for MP4)
 ```
-sudo port install ImageMagick ffmpeg +gpl +postproc +lame +theora +libogg +vorbis +xvid +x264 +a52 +faac +faad +dts +nonfree
+sudo port install ffmpeg +gpl +postproc +lame +theora +libogg +vorbis +xvid +x264 +a52 +faac +faad +dts +nonfree
 ```
 3. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 4. Install Python packages
 ```
-conda install numpy scipy matplotlib jupyter ipython
+conda install numpy scipy matplotlib jupyter ipython imagemagick
 ```
 5. `conda activate`
 6. `jupyter-notebook`
