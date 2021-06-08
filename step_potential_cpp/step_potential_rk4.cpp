@@ -1,3 +1,15 @@
+
+
+/****************************************************************************
+  FileName     [ step_potential_rk4.cpp ]
+  PackageName  [ step_potential_rk4 ]
+  Synopsis     [ Solve 1-D Schrodinger equation using finite-dfference and RK4 scheme ]
+  Author       [ Cory Chu ]
+  Date         [ 2021 June 08 ]
+  Copyright    [ Copyleft(c) 2021 GWLab, Taiwan ]
+****************************************************************************/
+
+
 #include <iostream>
 #include <cstdio>
 #include <vector>
