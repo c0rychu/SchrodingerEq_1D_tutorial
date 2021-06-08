@@ -1,7 +1,7 @@
 #CXX = clang++
 CXX = g++
 
-CXXFLAGS += -I/opt/local/include/eigen3/  # Include path to Eigen
+CXXFLAGS += -I/opt/local/include  # Include path to Eigen
 #CXXFLAGS += -fopenmp                      # Enable openmp
 CXXFLAGS += -O3                           # Enable optimization
 

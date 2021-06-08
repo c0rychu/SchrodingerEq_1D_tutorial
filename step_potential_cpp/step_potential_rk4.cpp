@@ -2,8 +2,8 @@
 #include <cstdio>
 #include <vector>
 #include <complex>
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+#include <eigen3/Eigen/Dense>
+#include <eigen3/Eigen/Sparse>
 #define _USE_MATH_DEFINES
 #include <cmath>
 #include <omp.h>
