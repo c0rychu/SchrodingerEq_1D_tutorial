@@ -7,22 +7,22 @@ plt.rc('savefig', dpi=300)
 
 
 data = np.genfromtxt('./step_potential.txt', delimiter=',', dtype=complex)
-x = data[0, 1:].astype(np.float)
-V = data[1, 1:].astype(np.float)
-sol_t = data[2:, 0].astype(np.float)
+x = data[0, 1:].astype(float)
+V = data[1, 1:].astype(float)
+sol_t = data[2:, 0].astype(float)
 sol_y = data[2:, 1:]
 
 dx = x[1]-x[0]
 
 # Make a plot of psi0 and V
-# fig = plt.figure(figsize=(15, 5))
-# plt.plot(x, V*0.01, "k--", label=r"$V(x) (x0.01)")
-# plt.plot(x, np.abs(psi0)**2, "r", label=r"$\vert\psi(t=0,x)\vert^2$")
-# plt.plot(x, np.real(psi0), "g", label=r"$Re\{\psi(t=0,x)\}$")
-# plt.legend(loc=1, fontsize=8, fancybox=False)
-# fig.savefig('step_initial@2x.png')
+fig = plt.figure(figsize=(15, 5))
+plt.plot(x, V*0.01, "k--", label=r"$V(x) (x0.01)")
+plt.plot(x, np.abs(sol_y[0, :])**2, "r", label=r"$\vert\psi(t=0,x)\vert^2$")
+plt.plot(x, np.real(sol_y[0, :]), "g", label=r"$Re\{\psi(t=0,x)\}$")
+plt.legend(loc=1, fontsize=8, fancybox=False)
+fig.savefig('step_initial@2x.png')
 
-# print("Total Probability: ", np.sum(np.abs(psi0)**2)*dx)
+print("Total Probability: ", np.sum(np.abs(sol_y[0, :])**2)*dx)
 
 
 # Plotting
@@ -73,7 +73,7 @@ anim = animation.FuncAnimation(fig, animate, init_func=init,
 
 # Save the animation into a short video
 print("Generating mp4")
-anim.save('step.mp4', fps=15, extra_args=['-vcodec', 'libx264'], dpi=600)
+anim.save('step.mp4', fps=15, extra_args=['-vcodec', 'libx264'], dpi=150)
 print("Generating GIF")
 # anim.save('step@2x.gif', writer='pillow', fps=15)
-anim.save('step@2x.gif', writer='imagemagick', fps=15, dpi=150, extra_args=['-layers Optimize'])
+anim.save('step@2x.gif', writer='imagemagick', fps=15, dpi=150)
