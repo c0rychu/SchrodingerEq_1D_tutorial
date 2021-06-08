@@ -18,7 +18,6 @@
 #include <eigen3/Eigen/Sparse>
 #define _USE_MATH_DEFINES
 #include <cmath>
-#include <omp.h>
 
 
 const std::complex<double> j(0.0, 1.0);
@@ -27,7 +26,7 @@ Eigen::SparseMatrix<double, Eigen::RowMajor> D2;    //RowMajor sparse matrix pro
 
 
 void D2_init(Eigen::SparseMatrix<double, Eigen::RowMajor> &d2, const unsigned int n, const double dx) {
-    std::vector<Eigen::Triplet<double>> D2_tripletList;
+    std::vector< Eigen::Triplet<double> > D2_tripletList;
     D2_tripletList.reserve(n*3);
     D2_tripletList.push_back(Eigen::Triplet<double>(0, 0, -2.0));
     D2_tripletList.push_back(Eigen::Triplet<double>(0, 1, 1.0));
