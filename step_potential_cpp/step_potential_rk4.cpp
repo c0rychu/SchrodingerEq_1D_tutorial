@@ -217,7 +217,7 @@ void ExportRK4::csv(FILE* f, const RK4& rk4, const unsigned int export_every_n_s
 }
 
 void ExportRK4:: _fprint_py_complex(FILE* f, const std::complex<double>& x) {
-    fprintf(f, "%f%+fj", x.real(), x.imag());
+    fprintf(f, "%g%+gj", x.real(), x.imag());
 }
 /******************************************************************************/
 
