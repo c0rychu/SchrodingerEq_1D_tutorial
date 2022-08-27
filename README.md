@@ -1,5 +1,6 @@
 # SchrodingerEq_1D_tutorial
-Solving Schrodinger Equation Numerically in Python
+Solving Schrodinger Equation Numerically in Python.
+Please refer to [this blog article](https://github.com/c0rychu/SchrodingerEq_1D_tutorial) for more detail explaination of the code.
 
 ## Files
 - `SchrodingerEq_1D_tutorial.ipynb`  A tutorial of solving 1-D Schrodinger equation. (Simple-Harmonic-Oscillator)
