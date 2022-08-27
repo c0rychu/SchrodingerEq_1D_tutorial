@@ -1,5 +1,5 @@
 # SchrodingerEq_1D_tutorial
-Solving Schrodinger Equation Numerically in Python.  
+Solving 1-D Schrodinger Equation Numerically in either Python or C++.  
 Please refer to [this blog article](https://blog.gwlab.page/solving-1-d-schrodinger-equation-in-python-dcb3518ce454) for more detail explaination of the code.
 
 ## Files
